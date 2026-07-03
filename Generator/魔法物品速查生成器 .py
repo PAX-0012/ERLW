@@ -184,7 +184,7 @@ class MagicItem:
 
         # ========= 稀有度 =========
         rarities = re.findall(
-            r"(非普通|极珍稀|珍稀|传说|神器|普通)",
+            r"(多种稀有度|非普通|极珍稀|珍稀|传说|神器|普通)",
             subline
         )
 
@@ -293,7 +293,7 @@ def process_file(file_path, file_name):
     parts = chm_path.split("/")
     book = parts[0]
 
-    if book in ["第三方"]:
+    if book in ["被遗忘的国度"]:
         book = parts[1]
         source = source_tag.get(book, book)
     elif book in source_tag:
